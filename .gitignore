@@ -1,38 +1,34 @@
 # Node modules
-node_modules/
+frontend-angular/node_modules/
+backend-nestjs/node_modules/
 
 # Build output
-dist/
-build/
-tmp/
-out-tsc/
+frontend-angular/dist/
+backend-nestjs/dist/
 
 # Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 # Environment files
+frontend-angular/.env
+backend-nestjs/.env
 .env
-.env.*
 
 # IDE files
 .vscode/
 .idea/
-*.sublime-workspace
-*.sublime-project
 
 # OS files
 .DS_Store
 Thumbs.db
 
 # Angular specific
-.angular/
-coverage/
+frontend-angular/.angular/
+frontend-angular/coverage/
 
 # NestJS specific
-*.js
-*.js.map
-
-# Others
-*.log
+backend-nestjs/*.js
+backend-nestjs/*.js.map
