@@ -1,1 +1,216 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #fafafa;
+  line-height: 1.6;
+}
+
+/* Custom Material Design theme overrides */
+.mat-mdc-card {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.mat-mdc-button.mat-primary {
+  background-color: #2196f3;
+  color: white;
+}
+
+.mat-mdc-button.mat-primary:hover {
+  background-color: #1976d2;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  background-color: #2196f3;
+  color: white;
+}
+
+.mat-mdc-raised-button.mat-primary:hover {
+  background-color: #1976d2;
+}
+
+.mat-mdc-fab.mat-primary {
+  background-color: #2196f3;
+  color: white;
+}
+
+.mat-mdc-fab.mat-primary:hover {
+  background-color: #1976d2;
+}
+
+.mat-mdc-icon-button.mat-primary {
+  color: #2196f3;
+}
+
+.mat-mdc-checkbox.mat-primary .mat-mdc-checkbox-frame {
+  border-color: #2196f3;
+}
+
+.mat-mdc-checkbox.mat-primary .mat-mdc-checkbox-background {
+  background-color: #2196f3;
+}
+
+/* Form field styling */
+.mat-mdc-form-field .mat-mdc-text-field-wrapper {
+  border-radius: 4px;
+}
+
+.mat-mdc-form-field.mat-form-field-appearance-outline .mat-mdc-form-field-outline {
+  color: #e0e0e0;
+}
+
+.mat-mdc-form-field.mat-form-field-appearance-outline.mat-focused .mat-mdc-form-field-outline {
+  color: #2196f3;
+}
+
+/* Snackbar styling */
+.mat-mdc-snack-bar-container {
+  border-radius: 4px;
+}
+
+/* Dialog styling */
+.mat-mdc-dialog-container {
+  border-radius: 8px;
+}
+
+/* Toolbar styling */
+.mat-mdc-toolbar.mat-primary {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* Menu styling */
+.mat-mdc-menu-panel {
+  border-radius: 4px;
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-8 { margin-top: 8px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mt-32 { margin-top: 32px; }
+
+.mb-8 { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-32 { margin-bottom: 32px; }
+
+.ml-8 { margin-left: 8px; }
+.ml-16 { margin-left: 16px; }
+.mr-8 { margin-right: 8px; }
+.mr-16 { margin-right: 16px; }
+
+.p-8 { padding: 8px; }
+.p-16 { padding: 16px; }
+.p-24 { padding: 24px; }
+
+.full-width {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hide-desktop {
+    display: none !important;
+  }
+}

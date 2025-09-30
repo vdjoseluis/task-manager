@@ -1,0 +1,77 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-button {
+  color: white;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-right button {
+  color: white;
+}
+
+.navbar-right button.active {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.user-menu-header {
+  padding: 16px;
+  background-color: #f5f5f5;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.user-name {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.user-email {
+  margin: 4px 0 0 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    display: none;
+  }
+
+  .navbar-right button span {
+    display: none;
+  }
+}

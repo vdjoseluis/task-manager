@@ -1,59 +1,141 @@
-# FrontendAngular
+# Task Manager Frontend (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.4.
+A modern, responsive task management application built with Angular 19 and Angular Material.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- **User Authentication**: Login and registration with JWT tokens
+- **Task Management**: Create, read, update, and delete tasks
+- **User Profile**: View and manage user information
+- **Responsive Design**: Works on desktop, tablet, and mobile devices
+- **Modern UI**: Clean, Material Design interface
+- **Real-time Updates**: Instant feedback for user actions
 
-```bash
-ng serve
+## Prerequisites
+
+Before running this application, make sure you have:
+
+- Node.js (version 18 or higher)
+- npm (version 9 or higher)
+- The backend NestJS API running on `http://localhost:3000`
+
+## Installation
+
+1. Navigate to the frontend directory:
+   ```bash
+   cd frontend-angular
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## Running the Application
+
+1. Start the development server:
+   ```bash
+   npm start
+   ```
+
+2. Open your browser and navigate to `http://localhost:4200`
+
+## Available Scripts
+
+- `npm start` - Start the development server
+- `npm run build` - Build the application for production
+- `npm run watch` - Build and watch for changes
+- `npm test` - Run unit tests
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── auth/                    # Authentication components
+│   │   ├── login/              # Login component
+│   │   └── register/           # Registration component
+│   ├── core/                   # Core services and models
+│   │   ├── interceptors/       # HTTP interceptors
+│   │   ├── models/             # TypeScript interfaces
+│   │   └── services/           # API and auth services
+│   ├── shared/                 # Shared components
+│   │   └── navbar/             # Navigation component
+│   ├── tasks/                  # Task management components
+│   │   ├── task-form/          # Task creation/editing dialog
+│   │   └── task-list/          # Task listing component
+│   ├── user/                   # User management components
+│   │   └── profile/            # User profile component
+│   ├── app.component.*         # Root component
+│   ├── app.config.ts           # Application configuration
+│   └── app.routes.ts           # Routing configuration
+├── environments/               # Environment configurations
+└── styles.css                  # Global styles
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Key Features
 
-## Code scaffolding
+### Authentication
+- JWT-based authentication
+- Automatic token refresh
+- Route guards for protected pages
+- Persistent login state
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Task Management
+- Create new tasks with title and description
+- Mark tasks as complete/incomplete
+- Edit existing tasks
+- Delete tasks with confirmation
+- Visual separation of pending and completed tasks
+- Task statistics dashboard
 
-```bash
-ng generate component component-name
-```
+### User Experience
+- Responsive design for all screen sizes
+- Loading states and error handling
+- Success/error notifications
+- Intuitive navigation
+- Clean, modern interface
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## API Integration
 
-```bash
-ng generate --help
-```
+The frontend integrates with the NestJS backend API:
 
-## Building
+- **Authentication**: `/auth/login`, `/users/register`
+- **Tasks**: `/tasks` (GET, POST, PATCH, DELETE)
+- **User Profile**: `/users/me`
 
-To build the project run:
+## Environment Configuration
 
-```bash
-ng build
-```
+The application uses environment files for configuration:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+- `environment.ts` - Development settings
+- `environment.prod.ts` - Production settings
 
-## Running unit tests
+Update the `apiUrl` in these files to point to your backend API.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Technologies Used
 
-```bash
-ng test
-```
+- **Angular 19** - Frontend framework
+- **Angular Material** - UI component library
+- **RxJS** - Reactive programming
+- **TypeScript** - Type-safe JavaScript
+- **CSS3** - Styling and animations
 
-## Running end-to-end tests
+## Browser Support
 
-For end-to-end (e2e) testing, run:
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-```bash
-ng e2e
-```
+## Contributing
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
 
-## Additional Resources
+## License
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the MIT License.
