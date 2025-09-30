@@ -1,10 +1,10 @@
 # Node modules
 frontend-angular/node_modules/
-backend-nestjs/node_modules/
+backend-nestJS/node_modules/
 
 # Build output
 frontend-angular/dist/
-backend-nestjs/dist/
+backend-nestJS/dist/
 
 # Logs
 *.log
@@ -14,8 +14,9 @@ yarn-error.log*
 
 # Environment files
 frontend-angular/.env
-backend-nestjs/.env
+backend-nestJS/.env
 .env
+backend-nestJS/generated/prisma
 
 # IDE files
 .vscode/
@@ -30,5 +31,6 @@ frontend-angular/.angular/
 frontend-angular/coverage/
 
 # NestJS specific
-backend-nestjs/*.js
-backend-nestjs/*.js.map
+backend-nestJS/*.js
+backend-nestJS/*.js.map
+
